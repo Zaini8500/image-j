@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #44c7c3;
+    padding: 10px;
+}
+
+.wrapper {
+    max-width: 100%;
+    min-height: 50vmin;
+    padding: 30px;
+    background-color: #242424;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(255, 255, 255, 0.15);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: auto;
+}
+header {
+    text-align: center;
+  
+}
+.logo {
+    height: 150px; /* Adjust the size of the logo */
+    width: auto;
+}
+.editor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.editor label {
+    font-size: 2.5vmin;
+    color: #fff;
+    font-weight: 400;
+}
+
+.editor input[type="range"] {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+}
+
+.flip-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.flip-buttons .flip-option {
+    margin-top: 10px;
+}
+
+.reset-save-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.reset-save-buttons label {
+    background-color: #17cc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 2.5vmin;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.reset-save-buttons label:hover {
+    background-color: #14a7a2;
+}
+
+.result {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.result img {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    max-height: 40vmin;
+    margin: auto;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.result label {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 220px;
+    background-color: #17cc;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    border-radius: 5px;
+    font-size: 3vmin;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 621px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+        padding: 50px 30px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .wrapper {
+        width: 100%;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .flip-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .flip-buttons .flip-option {
+        margin-top: 0;
+    }
+
+    .editor label {
+        font-size: 4vmin;
+    }
+
+    .reset-save-buttons label {
+        font-size: 3vmin;
+        width: 100px;
+        padding: 8px;
+    }
+
+    .result label {
+        width: 160px;
+        font-size: 4vmin;
+        padding: 12px;
+    }
+
+    .result img {
+        max-height: 30vmin;
+    }
+}
